@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:education_app/constants/color.dart';
 import 'package:education_app/constants/icons.dart';
 import 'package:education_app/models/lesson.dart';

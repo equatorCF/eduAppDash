@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:education_app/constants/color.dart';
 import 'package:education_app/constants/size.dart';
 import 'package:education_app/models/category.dart';
@@ -19,7 +21,7 @@ class FeaturedScreen extends StatefulWidget {
 class _FeaturedScreenState extends State<FeaturedScreen> {
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
+    return const AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
         body: Column(
