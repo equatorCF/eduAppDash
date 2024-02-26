@@ -14,39 +14,39 @@ class Lesson {
 
 List<Lesson> lessonList = [
   Lesson(
-    duration: '11 min 20 sec',
-    isCompleted: true,
-    isPlaying: true,
-    name: "Why Flutter Development",
+    duration: '20 minutes',
+    isCompleted: false,
+    isPlaying: false,
+    name: "Introduction to addition",
   ),
   Lesson(
     duration: '10 min 11 sec',
     isCompleted: false,
     isPlaying: false,
-    name: "Setup Flutter on MacOS",
+    name: "Addition(Lesson2)",
   ),
   Lesson(
     duration: '7 min',
     isCompleted: false,
     isPlaying: false,
-    name: "Setup Flutter on Windows",
+    name: "Addition(Lesson3)",
   ),
   Lesson(
     duration: '5 min',
     isCompleted: false,
     isPlaying: false,
-    name: "Introduction to Flutter widgets.",
+    name: "Addition(Lesson4)",
   ),
   Lesson(
     duration: '5 min',
     isCompleted: false,
     isPlaying: false,
-    name: "What are Stateless Widgets?",
+    name: "Addition(Lesson5)",
   ),
   Lesson(
     duration: '5 min',
     isCompleted: false,
     isPlaying: false,
-    name: "What are Statefull Widgets?",
+    name: "End Topic Quiz",
   )
 ];

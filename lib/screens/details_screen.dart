@@ -112,7 +112,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       color: Colors.grey,
                     ),
                     const Text(
-                      " 72 Hours",
+                      " 40 mins",
                       style: TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.w500,
@@ -120,14 +120,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       ),
                     ),
                     const Spacer(),
-                    const Text(
-                      " \$40",
-                      style: TextStyle(
-                        color: kPrimaryColor,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
-                      ),
-                    ),
                   ],
                 ),
                 const SizedBox(
@@ -187,10 +179,9 @@ class Description extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(top: 20.0),
-      child: Text(
-          "Build Flutter iOS and Android Apps with a Single Codebase: Learn Google's Flutter Mobile Development Framework & Dart"),
-    );
+        padding: EdgeInsets.only(top: 20.0),
+        child: Text(
+            "Welcome to our fun and interactive  addition section.! This section is designed to help you as a  learner practice and improve your addition skills in an engaging and enjoyable way.Get ready to unlock the world of numbers and have a blast while learning math!"));
   }
 }
 
@@ -205,7 +196,7 @@ class CustomTabView extends StatefulWidget {
 }
 
 class _CustomTabViewState extends State<CustomTabView> {
-  final List<String> _tags = ["Playlist (22)", "Description"];
+  final List<String> _tags = ["Playlist (6)", "Description"];
 
   Widget _buildTags(int index) {
     return GestureDetector(
