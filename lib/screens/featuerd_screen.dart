@@ -25,7 +25,7 @@ class _FeaturedScreenState extends State<FeaturedScreen> {
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
         body: Column(
-          children: const [
+          children: [
             AppBar(),
             Body(),
           ],

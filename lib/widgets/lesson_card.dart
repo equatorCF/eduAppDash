@@ -11,7 +11,7 @@ class LessonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => Addition())),
+          context, MaterialPageRoute(builder: (context) => const Addition())),
       child: Row(
         children: [
           lesson.isPlaying

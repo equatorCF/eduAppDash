@@ -47,7 +47,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     children: [
                       Align(
                         child: Text(
-                          "Flutter",
+                          "Addition",
                           style: Theme.of(context).textTheme.displayMedium,
                         ),
                       ),
@@ -71,7 +71,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   height: 15,
                 ),
                 const Text(
-                  "Futter Novice to Ninja",
+                  "Addition Novice to Ninja",
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
@@ -81,7 +81,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   height: 3,
                 ),
                 const Text(
-                  "Created by DevWheels",
+                  "Created by Teacher LMK",
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
