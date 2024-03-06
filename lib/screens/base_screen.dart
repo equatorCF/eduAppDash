@@ -2,6 +2,9 @@ import 'package:education_app/constants/color.dart';
 import 'package:education_app/constants/icons.dart';
 import 'package:education_app/constants/size.dart';
 import 'package:education_app/screens/featuerd_screen.dart';
+import 'package:education_app/screens/myLearning.dart';
+import 'package:education_app/screens/settings.dart';
+import 'package:education_app/screens/wishlist.dart';
 import 'package:flutter/material.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -15,9 +18,9 @@ class _BaseScreenState extends State<BaseScreen> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     FeaturedScreen(),
-    FeaturedScreen(),
-    FeaturedScreen(),
-    FeaturedScreen(),
+    MyLearning(),
+    Wishlist(),
+    Settings(),
   ];
   @override
   Widget build(BuildContext context) {

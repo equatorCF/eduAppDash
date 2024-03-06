@@ -1,17 +1,15 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class MyLearning extends StatefulWidget {
-  const MyLearning({Key? key}) : super(key: key);
+class Wishlist extends StatefulWidget {
+  const Wishlist({Key? key}) : super(key: key);
 
   @override
-  State<MyLearning> createState() => _MyLearningState();
+  State<Wishlist> createState() => _WishlistState();
 }
 
-class _MyLearningState extends State<MyLearning> {
+class _WishlistState extends State<Wishlist> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
