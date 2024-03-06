@@ -1,19 +1,26 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+// ignore_for_file: duplicate_import
 
-class Settings extends StatefulWidget {
+import 'package:education_app/screens/account_screen.dart';
+import 'package:education_app/screens/account_screen.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const Settings());
+}
+
+class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
 
   @override
-
-  // ignore: no_logic_in_create_state
-  State<Settings> createState() => _SettingsState();
-}
-
-class _SettingsState extends State<Settings> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent),
+        useMaterial3: true,
+      ),
+      home: const AccountScreen(),
+    );
   }
 }

@@ -3,6 +3,7 @@ import 'package:education_app/constants/icons.dart';
 import 'package:education_app/constants/size.dart';
 import 'package:education_app/screens/featuerd_screen.dart';
 import 'package:education_app/screens/myLearning.dart';
+// ignore: duplicate_import
 import 'package:education_app/screens/settings.dart';
 import 'package:education_app/screens/wishlist.dart';
 import 'package:flutter/material.dart';
