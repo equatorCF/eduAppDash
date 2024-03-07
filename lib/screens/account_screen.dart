@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:education_app/screens/edit_screen.dart';
 import 'package:education_app/widgets/forward_button.dart';
 import 'package:education_app/widgets/setting_item.dart';
