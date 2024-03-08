@@ -53,7 +53,8 @@ class _AccountScreenState extends State<AccountScreen> {
                 width: double.infinity,
                 child: Row(
                   children: [
-                    Image.asset("assets/avatar.png", width: 70, height: 70),
+                    Image.asset("assets/icons/avatar.png",
+                        width: 70, height: 70),
                     const SizedBox(width: 20),
                     const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
