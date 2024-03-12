@@ -1,15 +1,14 @@
 // ignore_for_file: unused_import
 
 import 'package:education_app/constants/color.dart';
-import 'package:education_app/constants/size.dart';
 import 'package:education_app/models/category.dart';
-import 'package:education_app/screens/course_screen.dart';
 import 'package:education_app/screens/details_screen.dart';
+import 'package:education_app/widgets/category_card.dart';
 import 'package:education_app/widgets/circle_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../widgets/search_testfield.dart';
+import 'package:education_app/widgets/search_testfield.dart';
+import 'package:education_app/widgets/lesson_card.dart'; // Assuming CategoryCard is defined in a separate file
 
 class FeaturedScreen extends StatefulWidget {
   const FeaturedScreen({Key? key}) : super(key: key);
@@ -52,7 +51,14 @@ class Body extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            const DetailsScreen(title: 'Title')),
+                  );
+                },
                 child: Text(
                   "See All",
                   style: Theme.of(context)
@@ -84,60 +90,6 @@ class Body extends StatelessWidget {
           itemCount: categoryList.length,
         ),
       ],
-    );
-  }
-}
-
-class CategoryCard extends StatelessWidget {
-  final Category category;
-  const CategoryCard({
-    Key? key,
-    required this.category,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const CourseScreen(),
-        ),
-      ),
-      child: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(.1),
-              blurRadius: 4.0,
-              spreadRadius: .05,
-            ), //BoxShadow
-          ],
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Align(
-              alignment: Alignment.topRight,
-              child: Image.asset(
-                category.thumbnail,
-                height: kCategoryCardImageSize,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(category.name),
-            Text(
-              "${category.noOfCourses.toString()} courses",
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
