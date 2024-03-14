@@ -30,7 +30,7 @@ List<Category> categoryList = [
   Category(
     name: 'Multiplication',
     noOfCourses: 7,
-    thumbnail: 'assets/icons/photography.jpg',
+    thumbnail: 'assets/icons/multi.jpg',
   ),
   Category(
     name: 'Division',
