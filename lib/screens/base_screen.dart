@@ -1,8 +1,10 @@
+// ignore_for_file: prefer_final_fields, prefer_const_constructors
+
 import 'package:education_app/constants/color.dart';
 import 'package:education_app/constants/icons.dart';
 import 'package:education_app/constants/size.dart';
 import 'package:education_app/screens/featuerd_screen.dart';
-import 'package:education_app/screens/myLearning.dart';
+import 'package:education_app/screens/myLeaderboard.dart';
 // ignore: duplicate_import
 import 'package:education_app/screens/settings.dart';
 import 'package:education_app/screens/wishlist.dart';
@@ -17,9 +19,9 @@ class BaseScreen extends StatefulWidget {
 
 class _BaseScreenState extends State<BaseScreen> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     FeaturedScreen(),
-    MyLearning(),
+    Leaderboard(),
     Wishlist(),
     Settings(),
   ];
@@ -55,7 +57,7 @@ class _BaseScreenState extends State<BaseScreen> {
                 icLearningOutlined,
                 height: kBottomNavigationBarItemSize,
               ),
-              label: "My Learning",
+              label: "Leaderboard",
             ),
             BottomNavigationBarItem(
               activeIcon: Image.asset(
@@ -66,7 +68,7 @@ class _BaseScreenState extends State<BaseScreen> {
                 icWishlistOutlined,
                 height: kBottomNavigationBarItemSize,
               ),
-              label: "Wishlist",
+              label: "Progress",
             ),
             BottomNavigationBarItem(
               activeIcon: Image.asset(
