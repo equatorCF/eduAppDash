@@ -99,6 +99,7 @@ class _Leaderboard extends State<Leaderboard> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: BottomAppBar(
           child: Container(
