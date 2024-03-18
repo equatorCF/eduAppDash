@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names, no_logic_in_create_state, unused_element, use_key_in_widget_constructors, unnecessary_import
+// ignore_for_file: constant_identifier_names, no_logic_in_create_state, unused_element, use_key_in_widget_constructors, unnecessary_import, file_names, avoid_unnecessary_containers
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +16,8 @@ const clickedColor = Color(0xFF0C3329);
 const unclickedColor = Color(0xFF196F3D);
 Color probtn = const Color(0xFF0C3329);
 Color leadbtn = const Color(0xFF196F3D);
-Color gold = const Color(0xFFD0B13E);
-Color silver = const Color(0xFFE7E7E7);
+Color blue1 = const Color(0xff3e48d0);
+Color blue2 = const Color(0xff216cc3);
 Color bronze = const Color(0xFFA45735);
 
 //Color list_item = Colors.grey[200];
@@ -207,7 +207,7 @@ class _Leaderboard extends State<Leaderboard> {
                       ),
                       Icon(
                         Icons.emoji_events_rounded,
-                        color: gold,
+                        color: blue2,
                         size: 70,
                       ),
                     ],
@@ -238,7 +238,7 @@ class _Leaderboard extends State<Leaderboard> {
       listItem = Card(
         margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
         shadowColor: Colors.grey[200],
-        color: gold,
+        color: blue1,
         child: Container(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -268,7 +268,7 @@ class _Leaderboard extends State<Leaderboard> {
       listItem = Card(
         margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
         shadowColor: Colors.grey[200],
-        color: silver,
+        color: blue2,
         child: Container(
           padding: const EdgeInsets.all(8.0),
           child: Row(
