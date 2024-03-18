@@ -108,13 +108,13 @@ class _Leaderboard extends State<Leaderboard> {
               margin:
                   const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
               elevation: 0,
-              color: Colors.red,
+              color: Colors.blue.shade400,
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text("pos",
+                    Text("Pos",
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold)),
                     CircleAvatar(

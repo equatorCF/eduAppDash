@@ -35,6 +35,6 @@ List<Category> categoryList = [
   Category(
     name: 'Division',
     noOfCourses: 8,
-    thumbnail: 'assets/icons/design.jpg',
+    thumbnail: 'assets/icons/su2.png',
   ),
 ];
