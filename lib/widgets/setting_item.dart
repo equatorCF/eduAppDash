@@ -1,4 +1,4 @@
-// ignore_for_file: duplicate_import, unused_import, use_key_in_widget_constructors
+// ignore_for_file: duplicate_import, unused_import, use_key_in_widget_constructors, unused_label, unused_element, empty_statements
 
 import 'package:education_app/widgets/forward_button.dart';
 import 'package:education_app/widgets/forward_button.dart';
@@ -60,10 +60,82 @@ class SettingItem extends StatelessWidget {
               : const SizedBox(),
           const SizedBox(width: 20),
           ForwardButton(
-            onTap: onTap,
+            onTap: () {
+              onTap:
+              () async {
+                List<String>? searchedItems = await showSearch(
+                  context: context,
+                  delegate: SearchBarDelegate(),
+                );
+
+                if (searchedItems != null && searchedItems.isNotEmpty) {
+                  onTap() {}
+                  ;
+                }
+              };
+            },
           ),
         ],
       ),
     );
+  }
+}
+
+class SearchBarDelegate extends SearchDelegate<List<String>> {
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      IconButton(
+        icon: const Icon(Icons.clear),
+        onPressed: () {
+          query = '';
+        },
+      ),
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      icon: const Icon(Icons.arrow_back),
+      onPressed: () {
+        close(context, []);
+      },
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    // Implement your search logic here
+    // Retrieve the searched items based on the query
+    List<String> searchedItems = performSearch(query);
+
+    return ListView.builder(
+      itemCount: searchedItems.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(searchedItems[index]),
+          onTap: () {
+            close(context, [searchedItems[index]]);
+          },
+        );
+      },
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    return Container(); // Placeholder widget for the search suggestions
+  }
+
+  List<String> performSearch(String query) {
+    // Implement your search logic here
+    // Return the searched items as a list
+    // This is just a placeholder implementation
+    return [
+      'Result 1 for $query',
+      'Result 2 for $query',
+      'Result 3 for $query',
+    ];
   }
 }

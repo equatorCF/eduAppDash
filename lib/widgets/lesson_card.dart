@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:education_app/constants/icons.dart';
 import 'package:education_app/models/lesson.dart';
 import 'package:education_app/screens/addition.dart';
@@ -11,7 +13,11 @@ class LessonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const Addition())),
+          context,
+          MaterialPageRoute(
+              builder: (context) => Addition(
+                    context: context,
+                  ))),
       child: Row(
         children: [
           lesson.isPlaying
